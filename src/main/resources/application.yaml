@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: temperature-processing
+
+server:
+  port: 8081

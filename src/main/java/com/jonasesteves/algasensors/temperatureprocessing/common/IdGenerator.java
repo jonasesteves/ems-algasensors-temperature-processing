@@ -1,0 +1,19 @@
+package com.jonasesteves.algasensors.temperatureprocessing.common;
+
+import com.fasterxml.uuid.Generators;
+import com.fasterxml.uuid.impl.TimeBasedEpochRandomGenerator;
+
+import java.util.UUID;
+
+public class IdGenerator {
+    /* (9.4) */
+
+    private static final TimeBasedEpochRandomGenerator timeBasedEpochRandomGenerator = Generators.timeBasedEpochRandomGenerator();
+
+    private IdGenerator() {
+    }
+
+    public static UUID generateTimeBasedUUID() {
+        return timeBasedEpochRandomGenerator.generate();
+    }
+}
